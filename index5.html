@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complete CSS Tutorial</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="stylesheet" href="style3.css">
+</head>
+<body>
+<h1>Complete CSS Tutorial</h1>
+<p>CSS (Cascading Style Sheets) is used to style HTML elements, control layouts, colors, fonts, animations, and more.</p>
+
+<!-- 1. Syntax -->
+<h2>1. CSS Syntax</h2>
+<p>CSS rules consist of a selector and a declaration block:</p>
+<div class="code-container">
+<button class="copy-btn">Copy</button>
+<div class="copied-msg">Copied!</div>
+<pre><code>h1 {
+  color: blue;
+  font-size: 24px;
+}</code></pre>
+</div>
+
+<!-- 2. Selectors -->
+<h2>2. Selectors</h2>
+<p>Target elements using type, class, ID, and attribute selectors:</p>
+<div class="code-container">
+<button class="copy-btn">Copy</button>
+<div class="copied-msg">Copied!</div>
+<pre><code>p { color: gray; }
+#header { background-color: #f4f4f4; }
+.container { padding: 20px; }
+a[href^="https"] { color: green; }</code></pre>
+</div>
+
+<!-- 3. Colors -->
+<h2>3. Colors & Backgrounds</h2>
+<p>Set colors using names, HEX, RGB, or HSL:</p>
+<div class="code-container">
+<button class="copy-btn">Copy</button>
+<div class="copied-msg">Copied!</div>
+<pre><code>body { background-color: #f8f9fa; }
+h1 { color: #007bff; }
+div { background-image: url('image.jpg'); }</code></pre>
+</div>
+
+<!-- 4. Fonts & Text -->
+<h2>4. Fonts & Text</h2>
+<p>Control font family, size, weight, style, alignment, and decoration:</p>
+<div class="code-container">
+<button class="copy-btn">Copy</button>
+<div class="copied-msg">Copied!</div>
+<pre><code>p {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: underline;
+}</code></pre>
+</div>
+
+<!-- 5. Box Model -->
+<h2>5. Box Model</h2>
+<p>All elements are boxes: content, padding, border, margin:</p>
+<div class="code-container">
+<button class="copy-btn">Copy</button>
+<div class="copied-msg">Copied!</div>
+<pre><code>div {
+  margin: 10px;
+  padding: 15px;
+  border: 1px solid #000;
+}</code></pre>
+</div>
+
+<!-- 6. Positioning -->
+<h2>6. Positioning</h2>
+<p>Control element positions:</p>
+<div class="code-container">
+<button class="copy-btn">Copy</button>
+<div class="copied-msg">Copied!</div>
+<pre><code>div {
+  position: relative;
+  top: 10px;
+  left: 20px;
+}
+
+.fixed-box {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}</code></pre>
+</div>
+
+<!-- 7. Flexbox -->
+<h2>7. Flexbox</h2>
+<p>Flexbox is used for one-dimensional layouts:</p>
+<div class="code-container">
+<button class="copy-btn">Copy</button>
+<div class="copied-msg">Copied!</div>
+<pre><code>.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}</code></pre>
+</div>
+
+<!-- 8. Grid -->
+<h2>8. CSS Grid</h2>
+<p>Grid is used for two-dimensional layouts:</p>
+<div class="code-container">
+<button class="copy-btn">Copy</button>
+<div class="copied-msg">Copied!</div>
+<pre><code>.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 10px;
+}</code></pre>
+</div>
+
+<!-- 9. Transitions & Animations -->
+<h2>9. Transitions & Animations</h2>
+<p>Animate property changes or create keyframe animations:</p>
+<div class="code-container">
+<button class="copy-btn">Copy</button>
+<div class="copied-msg">Copied!</div>
+<pre><code>button {
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #155ab6;
+}
+
+@keyframes slide {
+  from { transform: translateX(0); }
+  to { transform: translateX(100px); }
+}
+
+.box {
+  animation: slide 2s infinite alternate;
+}</code></pre>
+</div>
+
+<!-- 10. Pseudo-classes & Pseudo-elements -->
+<h2>10. Pseudo-classes & Pseudo-elements</h2>
+<p>Style elements based on state or part:</p>
+<div class="code-container">
+<button class="copy-btn">Copy</button>
+<div class="copied-msg">Copied!</div>
+<pre><code>a:hover { color: red; }
+li:first-child { font-weight: bold; }
+p::first-line { text-transform: uppercase; }</code></pre>
+</div>
+
+<!-- 11. Media Queries (Responsive) -->
+<h2>11. Media Queries</h2>
+<p>Make your layout responsive for different screen sizes:</p>
+<div class="code-container">
+<button class="copy-btn">Copy</button>
+<div class="copied-msg">Copied!</div>
+<pre><code>@media (max-width: 768px) {
+  body { font-size: 14px; }
+  .container { flex-direction: column; }
+}</code></pre>
+</div>
+<div class="button-container">
+<a href="index6.html"><button class="nav-button">Continue Learning</button></a>
+</div>
+<footer>
+
+<a href="https://www.w3schools.com/css/">Visit W3Schools CSS Tutorial</a>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
