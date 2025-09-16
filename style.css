@@ -1,119 +1,197 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Variables */
 :root {
-    --primary-color: #007bff; /* A vibrant, modern blue */
-    --secondary-color: #343a40; /* Dark gray for text */
-    --background-color: #f8f9fa; /* A very light gray background */
-    --container-bg: #ffffff; /* White background for elements */
+  --primary-color: #007bff;   /* Vibrant blue */
+  --secondary-color: #343a40; /* Dark gray */
+  --background-color: #f8f9fa;/* Light gray background */
+  --container-bg: #ffffff;    /* White for containers */
 }
 
+/* Body */
 body {
-    background-color: var(--background-color);
-    color: var(--secondary-color);
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    font-size: 18px;
-    line-height: 1.6;
-    margin: 0;
-    padding: 20px;
-    box-sizing: border-box;
+  background-color: var(--background-color);
+  color: var(--secondary-color);
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
 }
 
+/* Headings */
 h1 {
-    font-size: 2.5rem; /* Using rem for better scalability */
-    text-align: center;
-    color: var(--primary-color);
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-    margin: 40px auto;
-    text-transform: capitalize; /* More elegant than uppercase */
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--primary-color);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  text-transform: capitalize;
 }
 
+h2 {
+  font-size: 1.75rem;
+  color: rgba(124, 116, 116, 0.8);
+  margin-top: 40px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+/* Paragraphs */
 p {
-    font-size: 1rem;
-    text-align: justify;
-    line-height: 1.8;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 0 15px;
+  font-size: 1rem;
+  text-align: justify;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 15px;
 }
 
+/* Lists */
+li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 10px auto;
+  padding: 0 15px;
+  text-align: justify;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+/* Buttons */
 .button-container {
-    text-align: center;
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 25px;
-    border: 1px solid var(--primary-color);
-    border-radius: 12px;
-    background-color: var(--container-bg);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 25px;
+  border: 1px solid var(--primary-color);
+  border-radius: 12px;
+  background-color: var(--container-bg);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .button-container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .button-container button {
-    background-color: var(--primary-color);
-    color: #ffffff;
-    border: none;
-    padding: 12px 30px;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: background-color 0.3s, transform 0.2s;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .button-container button:hover {
-    background-color: #0056b3; /* A slightly darker shade on hover */
-    transform: scale(1.05);
+  background-color: #0056b3;
+  transform: scale(1.05);
 }
+
+/* Images */
 .image-container {
-            width: 100%;
-            max-width: 250px; /* Adjust this value to make the logo smaller */
-            margin: 30px auto;
-            text-align: center;
-        }
-
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-    li{
-    margin-bottom: 10px;
-    line-height: 1.6;
-    font-size: 1rem;
-    max-width: 800px;
-    margin: 10px auto;
-    padding: 0 15px;
-    text-align: justify;
-    list-style-type: disc;
-    list-style-position: inside;
-    }
-   .image-container{
-    display: block;
-    margin: 10px auto;
-    max-width: 30%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 250px;
+  margin: 30px auto;
+  text-align: center;
 }
 
-
-h2 {
-    font-size: 1.75rem;
-    color:rgba(124, 116, 116, 0.555);
-    margin-top: 40px;
-    text-align: center;
-    text-transform: capitalize;
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
+
+/* Logo */
 .logo {
-    display: block;
+  display: block;
+  margin: 20px auto;
+  max-width: 150px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* =====================
+   Responsive design
+   ===================== */
+
+/* Phones */
+@media (max-width: 575.98px) {
+  body {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
     margin: 20px auto;
-    max-width: 150px;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+
+  p, li {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+
+  .button-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .button-container button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .image-container {
+    max-width: 180px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 576px) and (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .button-container {
+    width: 80%;
+  }
+
+  .image-container {
+    max-width: 200px;
+  }
+}
+
+/* Small laptops */
+@media (min-width: 769px) and (max-width: 1200px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .button-container {
+    width: 70%;
+  }
+}
+
+/* Large desktops */
+@media (min-width: 1201px) {
+  .button-container {
+    width: 50%;
+  }
 }
