@@ -1,138 +1,71 @@
-:root {
-  --primary-color: #007bff;      /* Vibrant blue for headings */
-  --secondary-color: #343a40;    /* Dark gray text */
-  --background-color: #f8f9fa;   /* Light gray page background */
-  --container-bg: #2d2d2d;       /* Dark background for code container */
-  --code-bg: #1e1e1e;            /* Background for <pre> */
-  --button-color: #ffcc00;       /* Copy button */
-  --button-hover: #e6b800;
-  --copied-color: #0f0;
-}
-
+/* ---------------- Base Styles ---------------- */
 body {
-  font-family: Arial, sans-serif;
-  background: var(--background-color);
-  color: var(--secondary-color);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  margin: 0;
-  padding: 20px;
-}
-
-h1 {
-  font-size: 2.5rem;
-  text-align: center;
-  color: var(--primary-color);
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-  margin: 40px auto;
-  text-transform: capitalize;
-}
-
-.code-container {
-  background: var(--container-bg);
-  border-radius: 10px;
-  padding: 20px;
-  width: 90%;
-  max-width: 600px;
-  position: relative;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-  margin-bottom: 40px; /* spacing if multiple containers */
-}
-
-pre {
-  background: var(--code-bg);
-  color: #f8f8f2;
-  overflow-x: auto;
-  padding: 15px;
-  border-radius: 8px;
-  font-size: 14px;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  margin: 0;
-}
-
-button.copy-btn {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  padding: 8px 14px;
-  background: var(--button-color);
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-  color: #111;
-  transition: background 0.3s, transform 0.2s;
-}
-
-button.copy-btn:hover {
-  background: var(--button-hover);
-  transform: scale(1.05);
-}
-
-.copied-msg {
-  position: absolute;
-  top: 55px;
-  right: 20px;
-  color: var(--copied-color);
-  font-weight: bold;
-  display: none;
-  font-size: 0.9rem;
-}
-.button-container .button {
-    display: inline-block;
-    background: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: background 0.3s;
-}
-.button-container .button:hover {
-    background: #0056b3;
-}
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
     color: #333;
     margin: 0;
     padding: 20px;
+    line-height: 1.6;
+    max-width: 1200px;  /* keep text readable on big screens */
+    margin: 0 auto;
 }
 
-h1, h2 {
-    color: #007bff;
+h1, h2, h3 {
+    color: #1a73e8;
+    margin-top: 30px;
+    font-weight: bold;
 }
 
+p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+ul, ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+/* ---------------- Code Containers ---------------- */
 .code-container {
-    background: #2d2d2d;
+    background-color: #2d2d2d;
     color: #f8f8f2;
     border-radius: 8px;
     padding: 15px;
-    margin: 15px 0;
+    margin: 20px 0;
     position: relative;
     overflow-x: auto;
+    font-size: 15px;
 }
 
+.code-container pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* ---------------- Copy Button ---------------- */
 .copy-btn {
     position: absolute;
     top: 10px;
     right: 10px;
-    padding: 5px 10px;
-    background: #ffcc00;
+    background-color: #ffcc00;
+    color: #000;
     border: none;
     border-radius: 5px;
+    padding: 5px 10px;
     cursor: pointer;
     font-weight: bold;
+    transition: all 0.3s ease;
+    font-size: 14px;
 }
 
 .copy-btn:hover {
-    background: #e6b800;
+    background-color: #e6b800;
 }
 
+/* ---------------- Copied Message ---------------- */
 .copied-msg {
     position: absolute;
     top: 40px;
@@ -142,35 +75,115 @@ h1, h2 {
     display: none;
 }
 
+/* ---------------- Navigation Button ---------------- */
 .button-container {
-    margin: 20px 0;
+    margin: 25px 0;
+    text-align: center;
 }
 
 .nav-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
+    background-color: #1a73e8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 16px;
     text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: background 0.3s;
+    display: inline-block;
 }
 
 .nav-button:hover {
-    background-color: #0056b3;
+    background-color: #155ab6;
 }
 
 footer {
-    margin-top: 40px;
+    margin-top: 50px;
     text-align: center;
 }
 
 footer a {
-    color: #007bff;
+    color: #1a73e8;
     text-decoration: none;
 }
-
 footer a:hover {
     text-decoration: underline;
+}
+
+/* ---------------- Responsive Design ---------------- */
+
+/* Small devices (phones, <576px) */
+@media (max-width: 575.98px) {
+    body {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.5;
+        text-align: justify;
+    }
+
+    .code-container {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .copy-btn {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+
+    .nav-button {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        font-size: 15px;
+    }
+}
+
+/* Medium devices (tablets, 576px–768px) */
+@media (min-width: 576px) and (max-width: 768px) {
+    body {
+        font-size: 15px;
+        padding: 15px;
+    }
+
+    .code-container {
+        font-size: 14px;
+    }
+
+    .nav-button {
+        font-size: 15px;
+        padding: 10px 18px;
+    }
+}
+
+/* Large devices (desktops, >768px) */
+@media (min-width: 769px) {
+    body {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .code-container {
+        font-size: 15px;
+    }
 }
